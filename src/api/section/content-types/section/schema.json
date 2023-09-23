@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "sections",
+  "info": {
+    "singularName": "section",
+    "pluralName": "sections",
+    "displayName": "section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "executiveSections": {
+      "displayName": "Sections",
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.sections"
+    },
+    "supportingSections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.sections"
+    }
+  }
+}

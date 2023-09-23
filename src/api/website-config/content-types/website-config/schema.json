@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "website_configs",
+  "info": {
+    "singularName": "website-config",
+    "pluralName": "website-configs",
+    "displayName": "Website Config",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroDescription": {
+      "type": "text"
+    },
+    "aboutUs": {
+      "type": "text"
+    },
+    "goals": {
+      "displayName": "goals",
+      "type": "component",
+      "repeatable": true,
+      "component": "goals.goals"
+    }
+  }
+}
