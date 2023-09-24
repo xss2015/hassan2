@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-09-23T16:24:35.540Z"
+    "x-generation-date": "2023-09-24T15:08:24.518Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -25,7 +25,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337/api",
+      "url": "https://bin-rushud-api.digital-logic.tech/api",
       "description": "Development server"
     }
   ],
@@ -417,6 +417,9 @@
                 "items": {
                   "$ref": "#/components/schemas/GoalsGoalsComponent"
                 }
+              },
+              "goalDescription": {
+                "type": "string"
               }
             }
           }
@@ -485,6 +488,9 @@
             "items": {
               "$ref": "#/components/schemas/GoalsGoalsComponent"
             }
+          },
+          "goalDescription": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",

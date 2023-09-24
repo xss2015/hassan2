@@ -408,6 +408,7 @@ export interface ApiWebsiteConfigWebsiteConfig extends Schema.SingleType {
     heroDescription: Attribute.Text;
     aboutUs: Attribute.Text;
     goals: Attribute.Component<'goals.goals', true>;
+    goalDescription: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
