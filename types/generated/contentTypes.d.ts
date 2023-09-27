@@ -372,9 +372,24 @@ export interface ApiSectionSection extends Schema.SingleType {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    executiveSections: Attribute.Component<'sections.sections', true>;
-    supportingSections: Attribute.Component<'sections.sections', true>;
+    executiveSections: Attribute.Component<'sections.sections', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    supportingSections: Attribute.Component<'sections.sections', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -389,6 +404,12 @@ export interface ApiSectionSection extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::section.section',
+      'oneToMany',
+      'api::section.section'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -403,12 +424,42 @@ export interface ApiWebsiteConfigWebsiteConfig extends Schema.SingleType {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    heroTitle: Attribute.String;
-    heroDescription: Attribute.Text;
-    aboutUs: Attribute.Text;
-    goals: Attribute.Component<'goals.goals', true>;
-    goalDescription: Attribute.Text;
+    heroTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroDescription: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    aboutUs: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    goals: Attribute.Component<'goals.goals', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    goalDescription: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -423,6 +474,12 @@ export interface ApiWebsiteConfigWebsiteConfig extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::website-config.website-config',
+      'oneToMany',
+      'api::website-config.website-config'
+    >;
+    locale: Attribute.String;
   };
 }
 

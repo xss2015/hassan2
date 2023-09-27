@@ -10,18 +10,32 @@
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "executiveSections": {
       "displayName": "Sections",
       "type": "component",
       "repeatable": true,
-      "component": "sections.sections"
+      "component": "sections.sections",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "supportingSections": {
       "type": "component",
       "repeatable": true,
-      "component": "sections.sections"
+      "component": "sections.sections",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
