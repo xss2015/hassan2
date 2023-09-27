@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-09-27T18:30:55.570Z"
+    "x-generation-date": "2023-09-27T20:51:47.074Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -526,6 +526,21 @@
           "goalDescription": {
             "type": "string"
           },
+          "twitterLink": {
+            "type": "string"
+          },
+          "facebookLink": {
+            "type": "string"
+          },
+          "linkedinLink": {
+            "type": "string"
+          },
+          "instagramLink": {
+            "type": "string"
+          },
+          "youtubeLink": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -556,6 +571,21 @@
                 }
               },
               "goalDescription": {
+                "type": "string"
+              },
+              "twitterLink": {
+                "type": "string"
+              },
+              "facebookLink": {
+                "type": "string"
+              },
+              "linkedinLink": {
+                "type": "string"
+              },
+              "instagramLink": {
+                "type": "string"
+              },
+              "youtubeLink": {
                 "type": "string"
               },
               "locale": {
@@ -698,6 +728,21 @@
             }
           },
           "goalDescription": {
+            "type": "string"
+          },
+          "twitterLink": {
+            "type": "string"
+          },
+          "facebookLink": {
+            "type": "string"
+          },
+          "linkedinLink": {
+            "type": "string"
+          },
+          "instagramLink": {
+            "type": "string"
+          },
+          "youtubeLink": {
             "type": "string"
           },
           "createdAt": {

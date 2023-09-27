@@ -460,6 +460,36 @@ export interface ApiWebsiteConfigWebsiteConfig extends Schema.SingleType {
           localized: true;
         };
       }>;
+    twitterLink: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    facebookLink: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    linkedinLink: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    instagramLink: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    youtubeLink: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
