@@ -130,6 +130,19 @@
         }
       },
       "type": "integer"
+    },
+    "carouselImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

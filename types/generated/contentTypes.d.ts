@@ -361,6 +361,31 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiNewNew extends Schema.CollectionType {
+  collectionName: 'news';
+  info: {
+    singularName: 'new';
+    pluralName: 'news';
+    displayName: 'news';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+    content: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::new.new', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::new.new', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSectionSection extends Schema.SingleType {
   collectionName: 'sections';
   info: {
@@ -512,6 +537,12 @@ export interface ApiWebsiteConfigWebsiteConfig extends Schema.SingleType {
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
+        };
+      }>;
+    carouselImage: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
         };
       }>;
     createdAt: Attribute.DateTime;
@@ -862,6 +893,7 @@ declare module '@strapi/strapi' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::new.new': ApiNewNew;
       'api::section.section': ApiSectionSection;
       'api::website-config.website-config': ApiWebsiteConfigWebsiteConfig;
       'plugin::upload.file': PluginUploadFile;

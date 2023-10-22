@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CarouselCarousel extends Schema.Component {
+  collectionName: 'components_carousel_carousels';
+  info: {
+    displayName: 'carousel';
+    icon: 'book';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media;
+  };
+}
+
 export interface GoalsGoals extends Schema.Component {
   collectionName: 'components_goals_goals';
   info: {
@@ -33,6 +45,7 @@ export interface SectionsSections extends Schema.Component {
 declare module '@strapi/strapi' {
   export module Shared {
     export interface Components {
+      'carousel.carousel': CarouselCarousel;
       'goals.goals': GoalsGoals;
       'sections.sections': SectionsSections;
     }
